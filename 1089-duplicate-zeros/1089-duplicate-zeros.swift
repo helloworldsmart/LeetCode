@@ -1,9 +1,8 @@
 class Solution {
     func duplicateZeros(_ arr: inout [Int]) {
         var newArr = [Int]()
-        for index in 0 ... arr.count - 1  {
+        for index in 0...arr.count - 1  {
             if arr[index] == 0 {
-                // arr[index + 1] = 0
                 newArr.append(0)
                 newArr.append(0)
             } else {
