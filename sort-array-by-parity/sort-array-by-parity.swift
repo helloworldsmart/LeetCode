@@ -1,14 +1,13 @@
 class Solution {
     func sortArrayByParity(_ nums: [Int]) -> [Int] {
-        var odd = [Int]()
-        var even = [Int]()
+        var result = [Int]()
         for num in nums {
             if num % 2 == 0 {
-                even.append(num)
+                result.insert(num, at: 0)
             } else {
-                odd.append(num)
+                result.append(num)
             }
         }
-        return even + odd
+        return result
     }
 }
