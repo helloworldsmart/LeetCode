@@ -1,5 +1,5 @@
 class Node {
-    let data: Int
+    let data: Int 
     var next: Node?
     init(_ data: Int) {
         self.data = data
@@ -9,7 +9,7 @@ class Node {
 
 class MyLinkedList {
     var head: Node?
-
+    
     init() {
         
     }
@@ -24,6 +24,7 @@ class MyLinkedList {
         }
         guard counter == index else { return -1 }
         return current?.data ?? -1
+        
     }
     
     func addAtHead(_ val: Int) {
@@ -36,7 +37,7 @@ class MyLinkedList {
         let node = Node(val)
         guard let head = head else {
             self.head = node
-            return
+            return 
         }
         var current: Node? = head
         while let next = current?.next {
@@ -63,7 +64,7 @@ class MyLinkedList {
         }
         guard counter == index else {
             current?.next = node
-            return
+            return 
         }
         node.next = current
         prev?.next = node
@@ -84,7 +85,7 @@ class MyLinkedList {
             current = next
         }
         guard counter == index else {
-            return
+            return 
         }
         prev?.next = current?.next
     }
