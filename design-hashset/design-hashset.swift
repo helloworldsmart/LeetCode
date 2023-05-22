@@ -1,9 +1,14 @@
-class MyHashSet {
 
-    private var set = [[Int]](repeating: [], count: 10000)
+class MyHashSet {
     
+    private var set = [[Int]](repeating: [], count: 10000)
+
     private func hash(_ key: Int) -> Int {
         return key % set.count
+    }
+    
+    init() {
+        
     }
     
     func add(_ key: Int) {
@@ -21,9 +26,7 @@ class MyHashSet {
     func contains(_ key: Int) -> Bool {
         return set[hash(key)].contains(key)
     }
-    
 }
-
 
 /**
  * Your MyHashSet object will be instantiated and called as such:
