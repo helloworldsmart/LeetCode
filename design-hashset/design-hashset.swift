@@ -2,13 +2,9 @@
 class MyHashSet {
     
     private var set = [[Int]](repeating: [], count: 10000)
-
+    
     private func hash(_ key: Int) -> Int {
         return key % set.count
-    }
-    
-    init() {
-        
     }
     
     func add(_ key: Int) {
